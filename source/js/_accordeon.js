@@ -1,20 +1,15 @@
-var acc = document.getElementsByClassName("faq-list__visible");
-const hiddenContent = document.querySelector('.faq-list__hidden')
+var acc = document.querySelectorAll(".faq-list__item");
+const icons = document.querySelectorAll('.faq-list__icon')
 var i;
-const mobIcon = document.querySelectorAll('.mob-icon')
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
-    this.classList.toggle("collapse");
-    var panel = this.nextElementSibling;
-    if (panel.classList.contains('collapse')) {
-      panel.style.height = null;
-      panel.style.margin = '0px';
-      panel.style.overflow = 'hidden'
-      panel.style.display = 'none'
+    this.classList.toggle("active");
+    var panel = this;
+    if (panel.classList.contains('active')) {
+
     } else {
-      panel.style.overflow = 'unset'
-      panel.style.display = 'block'
+
     }
   });
 }

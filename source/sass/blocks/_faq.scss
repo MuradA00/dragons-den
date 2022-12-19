@@ -10,7 +10,8 @@
   &__item {
     padding: 0 rem(0) rem(0) rem(20);
     background-color: var(--clr-dark-500);
-
+    cursor: pointer;
+    transition: 350ms ease;
   }
   &__heading {
     font-weight: 700;
@@ -30,10 +31,64 @@
     justify-content: center;
     align-items: center;
     background-color: hsla(356, 20%, 16%, 1);
+    outline: 1px solid hsla(31, 100%, 54%, 1);
+    transition: all 350ms ease;
+    font-weight: 700;
+    flex: 0 0 auto;
+    .minus {
+      opacity: 0;
+      visibility: hidden;
+      display: none;
+    }
   }
   &__hidden {
     max-width: rem(780);
     margin-right: auto;
     display: none;
+    padding: 0 0 rem(20) 0;
+    opacity: 0;
+    transform: translateY(-5px);
+    display: none;
+    p {
+      line-height: 1.42;
+    }
+  }
+}
+.active {
+  outline: 1px solid hsla(31, 100%, 54%, 1);
+  .faq-list__visible {
+
+  }
+  .faq-list__hidden {
+    display: block;
+    animation: showBlock 500ms ease forwards;
+  }
+  .faq-list__icon {
+    outline: none;
+  }
+  .faq-list__icon {
+    .plus {
+      display: none;
+    }
+    .minus {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+@keyframes showBlock {
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@include max-width(34em) {
+  .faq-list {
+    &__heading {
+      font-size: 14px;
+    }
   }
 }

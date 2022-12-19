@@ -94,6 +94,54 @@
   }
 }
 
+.tournametns-page {
+  .index__all {
+    background-image: none;
+    padding-top: 0;
+    background-color: var(--clr-red-400);
+    padding: 1.15625rem 2.40625rem;
+    box-shadow: none;
+    margin-bottom: 0;
+    width: auto;
+    height: auto;
+  }
+  .index__table::after {
+    width: calc(100% - 17.75rem);
+  }
+  .index__table::before {
+    @include psevdo;
+    top: 0;
+    left: 0;
+    width: calc(100% - 45.7rem);
+    background-color: hsla(31, 100%, 54%, 1);
+    height: 2px;
+    z-index: 50;
+  }
+  .index__tour {
+    padding: 0;
+    box-shadow: none;
+    background-color: transparent;
+    width: rem(169);
+    margin-bottom: 0;
+    height: rem(71);
+    display: grid;
+    justify-items: center;
+    background-image: url('../../img/main/table-overlay.svg');
+    background-repeat: no-repeat;
+    background-size: 120% 150%;
+    background-position: -1.2rem -.7rem;
+    position: relative;
+    z-index: 100;
+    transform: translateY(1.5px);
+  }
+}
+
+@include max-width(75em) {
+  .tournametns-page .index__table::before {
+    width: 100%;
+  }
+}
+
 .index-page {
   height: 100vh;
   background-size: cover;

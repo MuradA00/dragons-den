@@ -11,6 +11,10 @@
     justify-content: center;
     align-items: center;
     padding: rem(57.5) 0 rem(24.5);
-
+  }
+  &__rights {
+    p {
+      font-weight: 300;
+    }
   }
 }

@@ -1,0 +1,132 @@
+.rules {
+  &__heading {
+    margin-bottom: rem(20);
+  }
+  &__info {
+    background-color: var(--clr-dark-300);
+    padding: rem(20);
+    border-radius: 10px;
+    position: relative;
+    p {
+      max-width: rem(509);
+      font-size: clamp(12px, vw(14), rem(14));
+      line-height: 1.42;
+    }
+  }
+  &__info-text {
+    display: flex;
+    flex-direction: column;
+    grid-gap: rem(20);
+  }
+  &__image {
+    position: absolute;
+    right: -55%;
+    top: -45%;
+    max-width: rem(943);
+  }
+  &__cards {
+    margin-bottom: rem(50);
+  }
+  &__gameplay {
+    margin-bottom: rem(50);
+  }
+  &__gameplay-title {
+    margin-bottom: rem(20);
+  }
+}
+
+.gameplay {
+  padding: rem(20) rem(22.5);
+  background-color: var(--clr-dark-500);
+  &__notif {
+    background-color: hsla(353, 22%, 12%, 1);
+    margin-top: rem(20);
+    padding: rem(20);
+  }
+}
+
+.rules-page {
+  background-repeat: no-repeat;
+  background-size: 100% 32%;
+  margin-bottom: rem(40);
+}
+
+.gameplay-list {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  grid-gap: rem(18);
+  font-size: clamp(12px, vw(14), rem(14));
+}
+
+.terms-list {
+  &__item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: rem(20);
+    min-height: rem(140) !important;
+    background-size: 100% 100% !important;
+    background-position: 100% 100% !important;
+  }
+  &__name {
+    font-size: clamp(1rem, vw(20), rem(20));
+    font-weight: 700;
+  }
+}
+
+@include max-width(75em) {
+  .rules {
+    &__info {
+      p {
+        max-width: 60%;
+      }
+    }
+    &__image {
+      top: -70%;
+      right: -40%;
+    }
+  }
+}
+
+@include max-width(62.5em) {
+  .rules-page {
+    background-size: 100% 25%;
+  }
+  .rules {
+    &__info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      p {
+        max-width: 100%;
+      }
+    }
+    &__image {
+      position: initial;
+    }
+  }
+}
+
+@include max-width(43.75em) {
+  .rules-page {
+    background-size: 100% 18%;
+  }
+  .rules {
+    &__info {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    &__image {
+      max-width: rem(300);
+    }
+  }
+}
+
+@include max-width(36.25em) {
+  .rules-page {
+    background-size: 100% 7%;
+    background-position: 0 2rem;
+  }
+}

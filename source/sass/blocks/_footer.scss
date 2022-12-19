@@ -1,0 +1,16 @@
+.footer {
+  background-repeat: no-repeat;
+  background-position: bottom;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  z-index: 1000;
+  &__body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: rem(57.5) 0 rem(24.5);
+
+  }
+}

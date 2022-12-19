@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="eng">
+@@include('_head.html',{})
+
+<body>
+  @@include('_header.html',{})
+
+  <main class="main login-page" style="background-image: url('img/login/login-bg.png');">
+    <div class="wrapper main-container">
+      <div class="pannel">
+        <div class="pannel__container">
+          <div class="pannel__inner">
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="#" class="nav__link" target="_blank">
+                    <span></span>
+                    Home
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a href="#" class="nav__link --selected-item" target="_blank">
+                    <span></span>
+                    Wallet connect
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="rules.html" target="_blank">
+                    <span></span>
+                    Rules
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a href="#" class="nav__link" target="_blank">
+                    <span></span>
+                    FAQ
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <section class="login">
+        <div class="login__image">
+          <picture>
+            <source type='image/webp' srcset='img/login/login-female-image.png'>
+            <img src='img/login/login-female-image.png' alt='login-female-image'>
+          </picture>
+        </div>
+        <div class="login__inner">
+          <h3 class="login__title title">
+            Login
+          </h3>
+          <form class="form" style="background-image: url('img/bg-icons/card-overlay.svg');">
+            <div class="form__container">
+              <div class="form__inputs">
+                <div class="form__input">
+                  <input placeholder="Player Name" type="text">
+                </div>
+                <div class="form__input">
+                  <input type="password" placeholder="Password">
+                </div>
+                <div class="form__input">
+                  <button class="form__button form__button--login">
+                    Login
+                  </button>
+                </div>
+                <div class="form__input">
+                  <a href="register.html" target="_blank" class="form__button form__button--register">Register</a>
+                </div>
+                <div class="form__input">
+                  <button class="form__button form__button--reset">Reset Password</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+
+  @@include('_footer.html',{})
+
+  <script src="js/common.js"></script>
+</body>
+
+</html>

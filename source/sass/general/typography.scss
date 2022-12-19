@@ -1,0 +1,10 @@
+.title {
+  font-size: clamp(rem(32), vw(40), rem(40));
+  font-weight: 700;
+  margin-bottom: rem(30);
+  position: relative;
+  z-index: 50;
+  @include max-width(75em) {
+    text-align: center;
+  }
+}

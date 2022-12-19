@@ -10,6 +10,20 @@
     background-color: var(--clr-dark-500);
     padding: rem(12) rem(20);
   }
+  &__table {
+    position: relative;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    &::after {
+      @include psevdo;
+      top: 0;
+      right: 0;
+      width: calc(100% - 10.1625rem);
+      background-color: hsla(31, 100%, 54%, 1);
+      height: 2px;
+      z-index: 50;
+    }
+  }
   &__table-item {
     font-size: 14px;
     line-height: 1.42;
@@ -21,6 +35,8 @@
     grid-gap: rem(25);
   }
   &__all {
+    position: relative;
+    z-index: 100;
     width: rem(169);
     height: rem(71);
     display: grid;
@@ -30,6 +46,10 @@
     padding-top: rem(24);
     background-size: 120% 150%;
     background-position: -1.2rem -.7rem;
+  }
+  &__wrapper {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
   &__tour {
     display: flex;
@@ -78,4 +98,65 @@
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@include max-width(65.625em) {
+  .index {
+    &__table-heading {
+      flex-direction: column;
+      width: fit-content;
+      grid-gap: 1rem;
+      padding: .25rem;
+    }
+    &__table {
+      display: flex;
+      &::after {
+        width: calc(100% - 7.8rem);
+      }
+    }
+    &__all {
+      width: 8rem;
+      background-position: 50% 30%;
+    }
+    &__table-item {
+      font-size: rem(12);
+      display: grid;
+      align-items: center;
+    }
+    &__wrapper {
+      display: flex;
+      & > .index__table-inner {
+        grid-gap: 1rem;
+      }
+    }
+    index__table-heading .index__table-item:nth-child(2) {
+      flex: 0 0 2.25rem;
+    }
+    .index__table-inner .index__table-item:nth-child(9) {
+      flex: 0 0 auto;
+    }
+    .index__table-inner .index__table-item:nth-child(1) {
+      flex: 0 0 1rem;
+    }
+    .index__table-inner .index__table-item:nth-child(8) {
+      flex: 0 0 2rem;
+    }
+    // .index__table-inner .index__table-item:nth-child(5) {
+    //   max-width: rem(45);
+    // }
+    .index__table-inner .index__table-item:nth-child(7) {
+      flex: 0 0 1.5rem;
+    }
+    &__body {
+      width: fit-content;
+      margin-inline: auto;
+    }
+    .index__table-inner:nth-child(2n) {
+      border-radius: 0;
+    }
+    &__table-inner {
+      flex-direction: column;
+      padding: .75rem .25rem;
+    }
+  }
 }
